@@ -6,19 +6,46 @@ https://opencode.ai/docs/keybinds/
   "app_exit": "ctrl+d, <leader>q"
 }
 
-### 🎯 核心解决方案：修改正确的配置文件
-
-1.  **检查配置文件**：用文本编辑器打开 `~/.config/opencode/tui.json`。如果文件不存在，可以新建一个。
-2.  **修改 `app_exit` 快捷键**：在文件中找到或添加 `keybinds` 部分，将 `app_exit` 的值修改为你期望的快捷键。以下是移除了 `ctrl+c` 的配置示例：
+**tui配置文件**：用文本编辑器打开 `~/.config/opencode/tui.json`。如果文件不存在，可以新建一个。
     ```json
-    {
-      "$schema": "https://opencode.ai/config.json",
-      "keybinds": {
-        "app_exit": "ctrl+d, <leader>q"
+   {
+    "$schema": "https://opencode.ai/tui.json",
+    "keybinds": {
+      "app_exit": "<leader>q"
+    }
+  }
+```
+**opencode.json配置文件**：用文本编辑器打开 `~/.config/opencode/opencode.json`。如果文件不存在，可以新建一个。
+    ```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": "allow",
+  "keybinds": {
+    "leader": "ctrl+i",
+    "app_exit": "<leader>q",
+     "command_list": "ctrl+m"
+  },
+  "provider": {
+    "ghcp": {
+      "name": "Copilot",
+      "options": {
+        "baseURL": "http://localhost:4141",
+        "apiKey": "dummy"
+      },
+      "models": {
+        "gpt-4.1": {
+          "name":"gpt-4.1 Free"
+        },
+        "claude-sonnet-4-6": {
+          "name":"claude-sonnet-4-6"
+        }
       }
     }
-    ```
-    > 注意：`<leader>` 键默认是 `ctrl+x`，所以 `ctrl+x q` 也是一个有效的退出快捷键。
+  }
+}
+```
+        
+    
 
 
 
