@@ -6,8 +6,9 @@ https://opencode.ai/docs/keybinds/
   "app_exit": "ctrl+d, <leader>q"
 }
 
-**tui配置文件**：用文本编辑器打开 `~/.config/opencode/tui.json`。如果文件不存在，可以新建一个。
-    ```json
+## tui配置文件：
+用文本编辑器打开 `~/.config/opencode/tui.json`。如果文件不存在，可以新建一个。
+```json
    {
     "$schema": "https://opencode.ai/tui.json",
     "keybinds": {
@@ -15,8 +16,9 @@ https://opencode.ai/docs/keybinds/
     }
   }
 ```
-**opencode.json配置文件**：用文本编辑器打开 `~/.config/opencode/opencode.json`。如果文件不存在，可以新建一个。
-    ```json
+## opencode.json配置文件：
+用文本编辑器打开 `~/.config/opencode/opencode.json`。如果文件不存在，可以新建一个。
+```json
 {
   "$schema": "https://opencode.ai/config.json",
   "permission": "allow",
